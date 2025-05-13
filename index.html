@@ -6,7 +6,63 @@
     <title>Calculadora de Investimentos</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body>
-    <h1 class="">Calculadora de investimentos</h1>
+  <body class="h-[100dvh] grid grid-cols-3 grid-rows-2">
+    <aside class="p-3 flex flex-col justify-between bg-emerald-300 row-span-2">
+      <h1 class="font-bold text-2xl">Calculadora de Investimentos</h1>
+      <form class="flex flex-col gap-4 justify-center" action="">
+        <div>
+          <label for="initial-amount" class="font-bold"
+            >Investimento Inicial</label
+          >
+          <div class="flex w-full mt-1">
+            <p class="px-5 py-1 bg-emerald-200 rounded-l-sm">R$</p>
+            <input
+              class="px-5 py-1 bg-emerald-100 w-full rounded-r-sm"
+              type="text"
+              placeholder="0,00"
+              id="initial-amount"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="additional-apports" class="font-bold"
+            >Aportes Adicionais</label
+          >
+          <div class="flex w-full mt-1">
+            <p class="px-5 py-1 bg-emerald-200 rounded-l-sm">R$</p>
+            <input
+              class="px-5 py-1 bg-emerald-100 w-full rounded-r-sm"
+              type="text"
+              placeholder="0,00"
+              id="additional-apports"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="evaluation-period" class="font-bold">Prazo</label>
+          <div class="flex w-full mt-1 gap-0.5">
+            <input
+              class="px-2 py-1 bg-emerald-100 w-full rounded-l-sm"
+              type="text"
+              placeholder="0"
+              id="evaluation-period"
+            />
+            <select
+              class="bg-emerald-100 w-2/5 text-center py-1 border-0"
+              name="period-type"
+              id="period-type"
+            >
+              <option value="monthly">Mensal</option>
+              <option value="yearly">Anual</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <div>
+        <button>Calcular</button>
+        <button>Limpar</button>
+      </div>
+    </aside>
+    <main></main>
   </body>
 </html>
