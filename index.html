@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Investimentos</title>
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="h-[100dvh] grid grid-cols-3 grid-rows-2">
     <aside class="p-3 flex flex-col justify-between bg-emerald-300 row-span-2">
@@ -15,9 +15,11 @@
             >Investimento Inicial</label
           >
           <div class="flex w-full mt-1">
-            <p class="px-5 py-1 bg-emerald-200 rounded-l-sm">R$</p>
+            <p class="px-5 py-1 w-1/5 text-center bg-emerald-200 rounded-l-lg">
+              R$
+            </p>
             <input
-              class="px-5 py-1 bg-emerald-100 w-full rounded-r-sm"
+              class="px-2 py-1 bg-emerald-100 w-full rounded-r-lg"
               type="text"
               placeholder="0,00"
               id="initial-amount"
@@ -29,9 +31,11 @@
             >Aportes Adicionais</label
           >
           <div class="flex w-full mt-1">
-            <p class="px-5 py-1 bg-emerald-200 rounded-l-sm">R$</p>
+            <p class="px-5 py-1 w-1/5 text-center bg-emerald-200 rounded-l-lg">
+              R$
+            </p>
             <input
-              class="px-5 py-1 bg-emerald-100 w-full rounded-r-sm"
+              class="px-2 py-1 bg-emerald-100 w-full rounded-r-lg"
               type="text"
               placeholder="0,00"
               id="additional-apports"
@@ -40,27 +44,73 @@
         </div>
         <div>
           <label for="evaluation-period" class="font-bold">Prazo</label>
-          <div class="flex w-full mt-1 gap-0.5">
+          <div class="flex w-full mt-1">
             <input
-              class="px-2 py-1 bg-emerald-100 w-full rounded-l-sm"
+              class="px-2 py-1 bg-emerald-100 w-full rounded-l-lg"
               type="text"
               placeholder="0"
               id="evaluation-period"
             />
             <select
-              class="bg-emerald-100 w-2/5 text-center py-1 border-0"
+              class="bg-emerald-100 w-2/5 hover:bg-emerald-600 text-center py-1 border-2 border-transparent rounded-r-lg ml-0.5"
               name="period-type"
-              id="period-type"
+              id="period-type-evaluation"
             >
-              <option value="monthly">Mensal</option>
-              <option value="yearly">Anual</option>
+              <option value="monthly">Meses</option>
+              <option value="yearly">Anos</option>
             </select>
           </div>
         </div>
+        <div>
+          <label for="return-rate" class="font-bold">Rentabilidade</label>
+          <div class="flex w-full mt-1">
+            <p class="px-5 py-1 w-1/5 text-center bg-emerald-200 rounded-l-lg">
+              %
+            </p>
+            <input
+              class="px-2 py-1 bg-emerald-100 w-4/5"
+              type="text"
+              placeholder="0,00"
+              id="return-rate"
+            />
+            <select
+              class="bg-emerald-100 w-2/5 hover:bg-emerald-600 text-center py-1 border-2 border-transparent rounded-r-lg ml-0.5"
+              name="period-type"
+              id="period-type-return-rate"
+            >
+              <option value="monthly">Meses</option>
+              <option value="yearly">Anos</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="tax-rate" class="font-bold">Impostos sobre o Lucro</label>
+          <div class="flex w-full mt-1">
+            <p class="px-5 py-1 w-1/5 text-center bg-emerald-200 rounded-l-lg">
+              %
+            </p>
+            <input
+              class="px-2 py-1 bg-emerald-100 w-full rounded-r-lg"
+              type="text"
+              placeholder="0,00"
+              id="tax-rate"
+            />
+          </div>
+        </div>
       </form>
-      <div>
-        <button>Calcular</button>
-        <button>Limpar</button>
+      <div class="flex h-12 px-6 my-8 gap-2">
+        <button
+          class="w-1/2 rounded-lg bg-emerald-950 text-slate-200 hover:bg-emerald-800"
+          id="button-calculate"
+        >
+          Calcular
+        </button>
+        <button
+          class="w-1/2 rounded-lg bg-emerald-600 text-slate-200 hover:bg-emerald-700"
+          id="button-clear"
+        >
+          Limpar
+        </button>
       </div>
     </aside>
     <main></main>
